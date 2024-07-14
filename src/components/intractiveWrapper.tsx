@@ -215,7 +215,11 @@ class IntractiveWrapper extends React.Component<PropType, StateType> {
               <Card className="card-front">
                 {buildMedia()}
 
-                <CardContent className="text">{cardDat.frontText}</CardContent>
+                <CardContent className="text">
+                  <div
+                    dangerouslySetInnerHTML={{ __html: cardDat.frontText }}
+                  ></div>
+                </CardContent>
                 <CardActions>
                   <Fab
                     color="primary"
