@@ -1,0 +1,18 @@
+{
+    "interactiveTitle": "My flip cards",
+    "cardWidth": 4,
+    "intructions": "flip the cards to see more kitty",
+    "cards": [{
+        "frontText": "the back of the card will say \"Cats\" ",
+        "backText": "Cats",
+        "isFlipped": false
+    }, {
+        "frontImgSrc": "https://c8.alamy.com/comp/2M0PY7T/cat-tabby-kitten-2M0PY7T.jpg",
+        "frontImgAltText": "tabby cat",
+        "frontText": "tabby",
+        "backImgSrc": "http://www.collectspace.com/images/news-111717a.jpg",
+        "backImgAltText": "space cat",
+        "backText": "Back of card",
+        "isFlipped": false
+    }]
+}
