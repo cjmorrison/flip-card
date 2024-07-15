@@ -26,6 +26,7 @@ interface CardsData {
   interactiveTitle?: string;
   intructions?: string;
   cardWidth: number;
+  cardPxHeight?: number,
   cards: Array<CardData>;
 }
 interface PropType {
@@ -52,6 +53,7 @@ class IntractiveWrapper extends React.Component<PropType, StateType> {
       interactiveTitle: "Data Load Failure",
       intructions: "",
       cardWidth: 6,
+      cardPxHeight: 300,
       cards: [
         {
           frontText: "Failed To Load Data",
@@ -210,7 +212,7 @@ class IntractiveWrapper extends React.Component<PropType, StateType> {
 
       return (
         <Grid xs={6} key={`card_${cardIndex}`} className="cardWrapper">
-          <div className={`card ${cardDat.isFlipped ? "flipped" : ""}`}>
+          <div style={{height:(this.state.cardsData.cardPxHeight|0)+'px'}} className={`card ${cardDat.isFlipped ? "flipped" : ""}`}>
             <div className="card-inner">
               <Card className="card-front">
                 {buildMedia()}
